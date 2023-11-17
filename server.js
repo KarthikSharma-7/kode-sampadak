@@ -5,7 +5,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 const ACTIONS = require('./src/Actions');
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 
 const server = http.createServer(app);
 const io = new Server(server);
