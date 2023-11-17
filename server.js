@@ -5,7 +5,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 const ACTIONS = require('./src/Actions');
 
-const port = process.env.PORT;
+const PORT = process.env.PORT;
 
 const server = http.createServer(app);
 const io = new Server(server);
@@ -68,6 +68,6 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(port, () => {
-  console.log(`Listening on ${port}`);
+server.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
 });
